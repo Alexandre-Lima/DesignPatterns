@@ -5,3 +5,5 @@
 /test/DesignPatterns.UnitTests/obj
 /test/DesignPatterns.UnitTests/bin/Debug/net6.0
 /.vs
+/src/Singleton/obj
+/src/Singleton/bin/Debug/net6.0
