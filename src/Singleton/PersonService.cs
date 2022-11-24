@@ -3,7 +3,12 @@ public sealed class PersonService
 {
     private static PersonService _instance;
 
-    private PersonService() { }
+    private List<string> _persons;
+
+    private PersonService()
+    {
+        _persons = new List<string>();
+    }
 
     public static PersonService GetInstance
     {
@@ -18,8 +23,13 @@ public sealed class PersonService
         }
     }
 
-    public string AddPerson(dynamic person)
+    public void AddPerson(dynamic person)
     {
-        return  $"Person {person} adicionado";
+        _persons.Add(person);
+    }
+
+    public IEnumerable<string> GetPersons()
+    {
+        return _persons;
     }
 }

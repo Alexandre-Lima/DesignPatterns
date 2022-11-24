@@ -1,7 +1,6 @@
 ﻿using Factory.SimpleFactory;
 using Factory.SimpleFactory.Abstract;
 using FluentAssertions;
-using System.Reflection;
 using Xunit;
 
 namespace DesignPatterns.UnitTests.Factory.SimpleFactory
@@ -10,7 +9,7 @@ namespace DesignPatterns.UnitTests.Factory.SimpleFactory
     {
 
         [Fact]
-        public async Task Execute_Create_Shape_Circle_Request()
+        public void Execute_Create_Shape_Circle_Request()
         {
             // Arrange
             var shapeType = "CIRCLE";
@@ -30,7 +29,7 @@ namespace DesignPatterns.UnitTests.Factory.SimpleFactory
         }
 
         [Fact]
-        public async Task Execute_Create_Shape_Rectangle_Request()
+        public void Execute_Create_Shape_Rectangle_Request()
         {
             // Arrange
             var shapeType = "RECTANGLE";
@@ -49,7 +48,7 @@ namespace DesignPatterns.UnitTests.Factory.SimpleFactory
         }
 
         [Fact]
-        public async Task Execute_Create_Shape_Square_Request()
+        public void Execute_Create_Shape_Square_Request()
         {
             // Arrange
             var shapeType = "SQUARE";

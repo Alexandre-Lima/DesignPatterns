@@ -1,4 +1,5 @@
-﻿using Singleton;
+﻿using FluentAssertions;
+using Singleton;
 using Xunit;
 
 namespace DesignPatterns.UnitTests.Singleton
@@ -7,18 +8,22 @@ namespace DesignPatterns.UnitTests.Singleton
     {
 
         [Fact]
-        public async Task Execute_Add_Person_Request()
+        public void Execute_Add_Person_Request()
         {
             // Arrange
-            var personService = PersonService.GetInstance;
-            var person = "michael jordan";
-            var result = $"Person {person} adicionado";
+            var personService1 = PersonService.GetInstance;
+            var personService2 = PersonService.GetInstance;
+
+            var person1 = "michael jordan";
+            var person2 = "michael phelps";
 
             //Act
-            var excute = personService.AddPerson(person);
+            personService1.AddPerson(person1);
+            personService2.AddPerson(person2);
 
             //Assert
-            excute.Equals(result);
+            personService1.GetPersons().Should().BeEquivalentTo(personService2.GetPersons());
+
         }
     }
 }
