@@ -20,7 +20,6 @@ namespace DesignPatterns.UnitTests.Factory.SimpleFactory
             var excute = shape1.Draw();
 
             //Assert
-
             shape1.GetType().Should().Be(typeof(Circle));
             shape1.GetType().Should().NotBe(typeof(Rectangle));
             shape1.GetType().Should().NotBe(typeof(Square));

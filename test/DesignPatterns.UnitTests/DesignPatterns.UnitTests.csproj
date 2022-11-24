@@ -23,6 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\Facade\Facade.csproj" />
     <ProjectReference Include="..\..\src\Factory\Factory.csproj" />
     <ProjectReference Include="..\..\src\Singleton\Singleton.csproj" />
   </ItemGroup>
