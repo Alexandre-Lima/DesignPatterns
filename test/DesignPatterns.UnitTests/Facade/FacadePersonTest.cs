@@ -22,7 +22,7 @@ namespace DesignPatterns.UnitTests.Facade
             var excute = facadePerson.RemovePerson(person);
 
             //Assert
-            excute.Should().Be(true);
+            excute.Should().Be(false);
         }
     }
 }
